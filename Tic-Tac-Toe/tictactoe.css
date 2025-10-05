@@ -1,0 +1,97 @@
+body {
+  font-family: "Oswald", Arial, sans-serif;
+  background: linear-gradient(135deg, #1c1c1c 40%, #ed1d24 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #fff;
+}
+.container {
+  text-align: center;
+}
+h1 {
+  margin-bottom: 10px;
+  font-size: 36px;
+  letter-spacing: 2px;
+  color: #ed1d24;
+  text-transform: uppercase;
+}
+.tagline {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #ccc;
+}
+.mode-selection button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: #ed1d24;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.3s;
+}
+.mode-selection button:hover {
+  background: #a50d11;
+  transform: scale(1.05);
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  margin: 20px auto;
+  width: max-content;
+}
+.cell {
+  background: #292929;
+  border: 2px solid #ed1d24;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  color: #fff;
+}
+.cell.x {
+  color: #ed1d24;
+  text-shadow: 0 0 10px #ed1d24;
+}
+.cell.o {
+  color: #8e44ad;
+  text-shadow: 0 0 10px #8e44ad, 0 0 5px #2ecc71;
+}
+.status {
+  font-size: 18px;
+  margin: 15px 0;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px #000;
+}
+.reset {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  font-weight: bold;
+}
+.reset:hover {
+  background: #ed1d24;
+  transform: scale(1.05);
+}
+.winner {
+  background: #ed1d24 !important;
+  color: #fff !important;
+  box-shadow: 0 0 15px #ed1d24;
+}
